@@ -75,9 +75,9 @@ class AddMedicationViewController: UIViewController {
             return
         }
 
-        let medication = Medication(name: name, dosage: dosage, timeOfDay: timePicker.date) // Store selected time
+        let medication = Medication(name: name, dosage: dosage, timeOfDay: timePicker.date) 
         delegate?.didAddMedication(medication)
-        NotificationManager.scheduleNotification(for: medication) // Call scheduleNotification from NotificationManager
+        NotificationManager.scheduleNotification(for: medication) 
         navigationController?.popViewController(animated: true)
     }
 }
